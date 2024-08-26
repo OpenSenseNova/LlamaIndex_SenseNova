@@ -1,6 +1,6 @@
-# LLamaIndex 集成日日新（SenseNova）
+# LlamaIndex 集成日日新（SenseNova）
 项目通过自定义LLM 的方式，使得 LlamaIndex 能够支持商汤日日新大模型（SenseNova）系列的大语言模型。提供一个简单的 LlamaIndex使用案例，包括从数据源建立索引，索引存储、从索引查询内容的完整流程。
-## LLamaIndex
+## LlamaIndex
 [LlamaIndex](https://www.llamaindex.ai/) 是一个强大的数据框架,旨在简化大型语言模型(LLMs)与外部数据的连接。它提供了一套工具和接口,使开发人员能够轻松地将自定义数据源集成到 LLM 应用中。LlamaIndex 支持各种数据类型的索引和查询,包括文本、结构化数据和even代码。它的核心功能包括数据加载、索引构建、查询接口和响应合成,这使得构建复杂的基于 LLM 的应用变得更加简单和高效。
 
 ## 商汤日日新大模型
