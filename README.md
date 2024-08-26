@@ -30,6 +30,22 @@ export SENSENOVA_SECRET_ACCESS_KEY=
 llm = SenseNova(model="SenseChat", access_key_id=access_key_id, secret_access_key=secret_access_key)
 ```
 
+### Embedding 使用
+```python
+from novaembedding import SenseNovaEmbedding
+
+# Set the global LLM and embedding model
+Settings.llm = llm
+Settings.embed_model = SenseNovaEmbedding()
+```
+由于目前SenseNova Embedding 支持的最大 token 数量为 512 和有 RPS限制，可以通过参数`chunk_size` 和 `rate_limit_per_second`配置。
+```python
+# 设置分割器
+splitter = SentenceSplitter(chunk_size=80, chunk_overlap=20,include_metadata=False)
+
+#  设置每秒请求的数量
+Settings.embed_model = SenseNovaEmbedding(rate_limit_per_second=3)
+```
 ### 执行测试脚本
 `data` 目录下是测试数据，  `starter.py`是测试脚本，通过以下命令执行测试：
 ```python
@@ -47,8 +63,7 @@ The author attempted to write programs.
 
 ## 参考链接
 - [LlamaIndex](https://www.llamaindex.ai/) 
-
 - [SenseChat API](https://console.sensecore.cn/help/docs/model-as-a-service/nova/chat/ChatCompletions/ChatCompletion)
-
+- [SenseEmbedding API](https://console.sensecore.cn/help/docs/model-as-a-service/nova/chat/Embeddings/Embedding)
 - [商汤日日新大模型开放平台](https://platform.sensenova.cn/home)
 - [LlamaIndex Github](https://github.com/run-llama/llama_index/tree/main)
