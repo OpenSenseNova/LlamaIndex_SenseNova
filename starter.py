@@ -52,5 +52,4 @@ query_engine = index.as_query_engine()
 response = query_engine.query(
     "What did the author do at IBM?"
 )
-# Print the query response
 print(response)

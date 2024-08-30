@@ -3,7 +3,6 @@
 import os
 import time
 from typing import Any, List, Optional
-
 import sensenova
 from llama_index.core.base.embeddings.base import (
     DEFAULT_EMBED_BATCH_SIZE,
